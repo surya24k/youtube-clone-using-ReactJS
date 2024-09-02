@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+*{
+  overflow: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 100%;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body {
+  padding: 20px;
+  width: 100%;
+  overflow: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+  width: 40px;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar h2 {
+  font-size: 24px;
+  cursor: pointer;
+  color: #606060;
+}
+
+.main {
+  display: flex;
+  overflow: hidden;
+  height: 50px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  color: red;
+  font-size: 40px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  padding: 10px;
+  margin-left: 20px;
+  width: 400px;
+}
+
+.search-box input {
+  border: none;
+  background: none;
+  width: 90%;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-icon, .mic {
+  color: #606060;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.video-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+}
+
+.video-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.video-card h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.video-card p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #606060;
 }
